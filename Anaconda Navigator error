@@ -1,0 +1,32 @@
+I get an error while I try accessing the Anaconda Navigator and NAvigator Prompt gives me the YAML error. Kindly resolve. I tried installing Anaconda multiple times. I have to use Tensorflow and Keras with GPU support for my assignment. I want to use Anaconda to code. But it's not working well.
+I get the below error, URL: file:///C:/Users/Sonal/AppData/Local/Temp/tmp6g4lgc4r.html
+
+Navigator Error
+An unexpected error occurred on Navigator start-up
+
+Report
+Please report this issue in the anaconda issue tracker
+
+Main Error
+byte indices must be integers or slices, not str
+Traceback
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_86\lib\site-packages\anaconda_navigator\exceptions.py", line 75, in exception_handler
+    return_value = func(*args, **kwargs)
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_86\lib\site-packages\anaconda_navigator\app\start.py", line 120, in start_app
+    window = run_app(splash)
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_86\lib\site-packages\anaconda_navigator\app\start.py", line 63, in run_app
+    window = MainWindow(splash=splash)
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_86\lib\site-packages\anaconda_navigator\widgets\main_window.py", line 163, in __init__
+    self.api = AnacondaAPI()
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_86\lib\site-packages\anaconda_navigator\api\anaconda_api.py", line 2004, in AnacondaAPI
+    ANACONDA_API = _AnacondaAPI()
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_86\lib\site-packages\anaconda_navigator\api\anaconda_api.py", line 88, in __init__
+    self._conda_api = CondaAPI()
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_86\lib\site-packages\anaconda_navigator\api\conda_api.py", line 1690, in CondaAPI
+    CONDA_API = _CondaAPI()
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_86\lib\site-packages\anaconda_navigator\api\conda_api.py", line 347, in __init__
+    self.set_conda_prefix()
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_86\lib\site-packages\anaconda_navigator\api\conda_api.py", line 496, in set_conda_prefix
+    self.ROOT_PREFIX = info['root_prefix']
+TypeError: byte indices must be integers or slices, not str
