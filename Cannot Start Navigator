@@ -1,0 +1,12 @@
+
+#Please see error message below
+
+could not determine a constructor for the tag 'tag:yaml.org,2002:python/unicode'
+  in "/Users/<user name./Library/Application Support/binstar/config.yaml", line 1, column 1
+  
+  #New to Python
+  #Tried downloading new version of anaconda client as referenced in stackoverflow
+  #Tried also deleting the binstar/config.yaml....but couldn't locate it
+  #I'm on a Mac
+  #Would really appreciate any help
+  
