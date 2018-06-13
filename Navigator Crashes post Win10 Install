@@ -1,0 +1,28 @@
+Navigator ErrorAn unexpected error occurred on Navigator start-up
+Main Errorexpected str, bytes or os.PathLike object, not NoneType
+Traceback (most recent call last):
+File "C:\ProgramData\Anaconda3\lib\site-packages\anaconda_navigator\exceptions.py", line 75, in exception_handler
+    return_value = func(*args, **kwargs)
+   File "C:\ProgramData\Anaconda3\lib\site-packages\anaconda_navigator\app\start.py", line 150, in start_app
+    window = run_app(splash)
+File "C:\ProgramData\Anaconda3\lib\site-packages\anaconda_navigator\app\start.py", line 65, in run_app
+    window = MainWindow(splash=splash, tab_project=False)
+ File "C:\ProgramData\Anaconda3\lib\site-packages\anaconda_navigator\widgets\main_window.py", line 163, in __init__
+    self.api = AnacondaAPI()
+File "C:\ProgramData\Anaconda3\lib\site-packages\anaconda_navigator\api\anaconda_api.py", line 2185, in AnacondaAPI
+    ANACONDA_API = _AnacondaAPI()
+File "C:\ProgramData\Anaconda3\lib\site-packages\anaconda_navigator\api\anaconda_api.py", line 2185, in AnacondaAPI
+    ANACONDA_API = _AnacondaAPI()
+File "C:\ProgramData\Anaconda3\lib\site-packages\anaconda_navigator\api\anaconda_api.py", line 89, in __init__
+    self._conda_api = CondaAPI()
+File "C:\ProgramData\Anaconda3\lib\site-packages\anaconda_navigator\api\conda_api.py", line 1714, in CondaAPI
+    CONDA_API = _CondaAPI()
+File "C:\ProgramData\Anaconda3\lib\site-packages\anaconda_navigator\api\conda_api.py", line 1714, in CondaAPI
+    CONDA_API = _CondaAPI()
+File "C:\ProgramData\Anaconda3\lib\site-packages\anaconda_navigator\api\conda_api.py", line 353, in __init__
+    self.sys_rc_path = join(self.ROOT_PREFIX, '.condarc')
+ File "C:\ProgramData\Anaconda3\lib\ntpath.py", line 76, in join
+    path = os.fspath(path)
+ File "C:\ProgramData\Anaconda3\lib\ntpath.py", line 76, in join
+    path = os.fspath(path)
+ror: expected str, bytes or os.PathLike object, not NoneType
