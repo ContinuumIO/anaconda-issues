@@ -16,7 +16,7 @@ Conda-Forge feedstock:
   ```
   Please explain why you are requesting this update
   ```
-</details
+</details>
 
 ## Describe the solution you would like
 <details>
