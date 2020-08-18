@@ -1,3 +1,13 @@
+Thanks for opening an update package request! Please fill out the following template in full.
+
+A few things to keep in mind:
+
+- This issue tracker is for issues with installing Anaconda or Miniconda or with packages built by Anaconda, Inc. like Anaconda Navigator. It is also a place to request packages or other enhancements of the Anaconda Distribution.
+- Anaconda Community Code of Conduct: https://www.anaconda.com/community-code-of-conduct/
+- For conda issues, you should open an issue at https://github.com/conda/conda/issues
+- For conda-build issues, you should open an issue at https://github.com/conda/conda-build
+- For an issue with a particular conda-forge package, you should open an issue on the corresponding feedstock: https://github.com/conda-forge
+
 ## Package Information
 <details>
 
