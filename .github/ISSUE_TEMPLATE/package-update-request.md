@@ -1,3 +1,7 @@
+---
+name: Package update request
+about: You're looking to request an update to an existing package
+---
 Thanks for opening an update package request! Please fill out the following template in full.
 
 A few things to keep in mind:
