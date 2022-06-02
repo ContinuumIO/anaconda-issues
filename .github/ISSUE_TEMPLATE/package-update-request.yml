@@ -1,15 +1,15 @@
-name: New Package request
-description: Request a new package to be built
-labels: ['tag-new_package']
+name: Package update request
+description: Request an update to an existing package
+labels: ['tag-package_request']
 body:
   - type: markdown
     attributes:
       value: |
-        This form is to make a request to the Anaconda, Inc team to build a new package that doesn't exist yet.
+        This form is to request an update to the Anaconda, Inc team to update an existing package in the defaults channel.
 
         Going through package requests takes up a lot of time, so please be so kind and take a few minutes to fill out all the areas to the best of your ability.
 
-        There will always be more packages to build than than there is time to do them, and so we will need to selectively close requests that don't provide enough information, so we can focus our time on helping people like you who fill out the issue form completely. Thank you for your collaboration!
+        There will always be more packages to build than than there is time to update them, and so we will need to selectively close requests that don't provide enough information, so we can focus our time on helping people like you who fill out the issue form completely. Thank you for your collaboration!
 
         There are also already a lot of open package requests, so please take 2 minutes and search through existing ones to see if what you are requesting already exists so you can 👍.
 
@@ -42,7 +42,7 @@ body:
     id: problem
     attributes:
       label: Problem
-      description: Is your Package request related to a problem? Please describe.
+      description: Is your update request related to a problem? Please describe.
 
   - type: textarea
     id: context

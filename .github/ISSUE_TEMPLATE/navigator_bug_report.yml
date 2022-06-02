@@ -1,11 +1,11 @@
-name: General Bug Report
-description: Create a report to help us improve
-labels: ['type-bug']
+name: Navigator Bug Report
+description: Create Navigator bug report to help us improve
+labels: ['type-bug','pkg-navigator']
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for helping! 🐍
+        Thanks for helping Navigator! 🐍
 
         Going through bugs and issues takes up a lot of time, so please be so kind and take a few minutes to fill out all the areas to the best of your ability.
 
@@ -15,7 +15,7 @@ body:
 
         Thanks for helping Anaconda be amazing. We are nothing without people like you helping build a better community 💐!
 
-        This issue type is for issues with installing Anaconda or Miniconda.
+        This issue type is for issues with the Anaconda Navigator desktop app.
 
         Anaconda Community Code of Conduct: https://www.anaconda.com/community-code-of-conduct/
 
