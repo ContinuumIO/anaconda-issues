@@ -1,6 +1,6 @@
 name: Navigator Feature Request
 description: Create a feature request to make Navigator even better
-labels: ['type-feature']
+labels: ['type-feature', 'pkg-navigator']
 body:
   - type: markdown
     attributes:
