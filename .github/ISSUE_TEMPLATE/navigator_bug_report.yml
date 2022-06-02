@@ -52,6 +52,8 @@ body:
         conda info
         ```
       render: shell
+    validations:
+      required: true
   - type: textarea
     id: config
     attributes:
@@ -63,6 +65,8 @@ body:
         conda config --show-sources
         ```
       render: shell
+    validations:
+      required: true
   - type: textarea
     id: list
     attributes:
@@ -74,6 +78,8 @@ body:
         conda list --show-channel-urls
         ```
       render: shell
+    validations:
+      required: true
   - type: textarea
     id: context
     attributes:
