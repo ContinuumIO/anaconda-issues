@@ -1,0 +1,61 @@
+name: Navigator Feature Request
+description: Create a feature request to make Navigator even better
+labels: ['type-feature', 'pkg-navigator']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping Navigator! 🐍
+
+        Going through feature requests takes up a lot of time, so please be so kind and take a few minutes to fill out all the areas to the best of your ability.
+
+        There will always be more issues than there is time to do them, and so we will need to selectively close issues that don't provide enough information, so we can focus our time on helping people like you who fill out the issue form completely. Thank you for your collaboration!
+
+        There are also already a lot of open issues, so please take 2 minutes and search through existing ones to see if what you are experiencing already exists
+
+        Thanks for helping Anaconda be amazing. We are nothing without people like you helping build a better community 💐!
+
+        This issue type is for suggestions for the Anaconda Navigator desktop app.
+
+        Anaconda Community Code of Conduct: https://www.anaconda.com/community-code-of-conduct/
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      description: Please confirm and check all the following options
+      options:
+        - label: I added a descriptive title
+          required: true
+        - label: I searched for other feature requests and couldn't find a duplicate (including also the ``type-feature`` tag)
+          required: true
+        - label: I confirmed that it's not related to another project (see the above section)
+          required: true
+  - type: textarea
+    id: request-idea
+    attributes:
+      label: What is the idea?
+      description: Describe what the feature is and the desired state
+      placeholder: This feature would allow any user of Navigator to save their environments to a cloud backup.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is this needed
+      description: |
+        Who would benefit from this and why would this add value to them? What problem does this solve?
+      placeholder: This would benefit users who would like to be able to know their environments are saved in a safe place.
+  - type: textarea
+    id: what
+    attributes:
+      label: What should happen?
+      description: |
+         What should be the user experience with the feature? Describe from a user perpective what they would do and see
+      placeholder: A user would click a 'save' button by their environments and a message would show that the environment has been saved.
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: |
+        Is there any other information that you think would be valuable for the team to know?

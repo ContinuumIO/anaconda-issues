@@ -1,0 +1,51 @@
+name: Package update request
+description: Request an update to an existing package
+labels: ['tag-package_request']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This form is to request an update to the Anaconda, Inc team to update an existing package in the defaults channel.
+
+        Going through package requests takes up a lot of time, so please be so kind and take a few minutes to fill out all the areas to the best of your ability.
+
+        There will always be more packages to build than than there is time to update them, and so we will need to selectively close requests that don't provide enough information, so we can focus our time on helping people like you who fill out the issue form completely. Thank you for your collaboration!
+
+        There are also already a lot of open package requests, so please take 2 minutes and search through existing ones to see if what you are requesting already exists so you can 👍.
+
+        Thanks for helping the package community be amazing. We are nothing without people like you helping build a better community 💐!
+
+        Anaconda Community Code of Conduct: https://www.anaconda.com/community-code-of-conduct/
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      description: Please confirm and check all the following options.
+      options:
+        - label: I added a descriptive title
+          required: true
+        - label: I searched for other package requests and couldn't find a duplication
+          required: true
+  - type: textarea
+    id: package-info
+    attributes:
+      label: Package info
+      description: Let us know all the package info that you can. 
+      placeholder: |
+        1. Name:
+        2. Source:
+        3. Platform:
+        4. Conda-Forge feedstock:
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Is your update request related to a problem? Please describe.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Add any additional context information or screenshots you think are useful.

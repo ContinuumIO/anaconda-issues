@@ -1,1 +1,9 @@
 blank_issues_enabled: false
+
+contact_links:
+  - name: Conda Build Issues/Features
+    url: https://github.com/conda/conda-build/issues
+    about: Anything related to the "conda-build" project should go here
+  - name: Conda issues
+    url: https://github.com/conda/conda/issues
+    about: Anything related to the "conda" project should go here
