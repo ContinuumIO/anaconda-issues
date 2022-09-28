@@ -5,19 +5,14 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for helping! 🐍
+        Thank you for helping us identify bugs and issues in our products.
 
-        Going through bugs and issues takes up a lot of time, so please be so kind and take a few minutes to fill out all the areas to the best of your ability.
+        We kindly ask that you take the time to:
+          - Search through [existing issues](https://github.com/ContinuumIO/anaconda-issues/issues) to verify whether your bug or issue has already been reported.
+          - Fill in all of the fields below, as best you can.
+          - Review and comply with our [Anaconda Community Code of Conduct](https://www.anaconda.com/community-code-of-conduct/).
 
-        There will always be more issues than there is time to do them, and so we will need to selectively close issues that don't provide enough information, so we can focus our time on helping people like you who fill out the issue form completely. Thank you for your collaboration!
-
-        There are also already a lot of open issues, so please take 2 minutes and search through existing ones to see if what you are experiencing already exists
-
-        Thanks for helping Anaconda be amazing. We are nothing without people like you helping build a better community 💐!
-
-        This issue type is for issues with installing Anaconda or Miniconda.
-
-        Anaconda Community Code of Conduct: https://www.anaconda.com/community-code-of-conduct/
+        Again, thank you for your contribution and for helping Anaconda better serve its community of users. 🐍
 
   - type: checkboxes
     id: checks
@@ -25,20 +20,34 @@ body:
       label: Checklist
       description: Please confirm and check all the following options.
       options:
-        - label: I added a descriptive title
+        - label: I added a descriptive title.
           required: true
-        - label: I searched for other issues and couldn't find a solution or duplication
+        - label: I searched through [existing issues](https://github.com/ContinuumIO/anaconda-issues/issues) and couldn't find a solution or duplicate issue.
           required: true
-        - label: I already searched in Google and didn't find any good information or help
+        - label: I searched on the web (e.g. Google) and didn't find any helpful information.
           required: true
-        - label: I looked at the [docs](https://docs.anaconda.com/) and didn't see anything to help
+        - label: I searched the [Anaconda documentation](https://docs.anaconda.com/) and didn't find any helpful information.
           required: true
+
+  - type: checkboxes
+    id: product
+    attributes:
+      label: Impacted product
+      description: Please indicate the product for which you are reporting the bug or issue.
+      options:
+        - label: Anaconda Distribution
+          required: false
+        - label: Miniconda
+          required: false
+        - label: A conda package
+          required: false
+
   - type: textarea
     id: what-happened
     attributes:
       label: What happened?
-      description: What happened and what should have happened instead? This really helps us sort quicker and greatly increases the chance that we can get around to solve your issue
-      placeholder: Tell us what you see!
+      description: What happened and what were you expecting to happen? This information helps us to better prioritize and triage your issue.
+      placeholder: Tell us what happened and what you were expecting to happen.
     validations:
       required: true
   - type: textarea
@@ -46,7 +55,7 @@ body:
     attributes:
       label: Conda info
       description: |
-        Let's get the info on your conda setup. Run the following command from your command line and paste the output
+        Let's get the info on your conda installation. Run the following command from your command line and paste the output in the field below.
 
         ```bash
         conda info
@@ -57,7 +66,7 @@ body:
     attributes:
       label: Conda config
       description: |
-        Let's see what your Conda config looks like. Run the following command from your command line and paste the output
+        Let's examine your conda configurations. Run the following command from your command line and paste the output in the field below.
 
         ```bash
         conda config --show-sources
@@ -68,7 +77,7 @@ body:
     attributes:
       label: Conda list
       description: |
-        These are the packages installed in your Conda environment and the Conda channels used. They tell us where you are pulling packages from. Make sure you are in the environment where \n you are seeing the issues. Run the following command from your command line and paste the output
+        Lets examine the packages installed in your conda environment and the channels they came from. Make sure you are in the environment where \n you are seeing the issues. Run the following command from your command line and paste the output in the field below.
 
         ```bash
         conda list --show-channel-urls
@@ -77,5 +86,5 @@ body:
   - type: textarea
     id: context
     attributes:
-      label: Additional Context
-      description: Add any additional context information or screenshots you think are useful.
+      label: Additional information
+      description: Add any additional information or screenshots that you think may help us resolve your issue.
