@@ -18,7 +18,7 @@ body:
     id: checks
     attributes:
       label: Checklist
-      description: Please confirm and check all the following options.
+      description: "Please confirm the following:"
       options:
         - label: I added a descriptive title.
           required: true
@@ -46,7 +46,7 @@ body:
     id: what-happened
     attributes:
       label: What happened?
-      description: What is the error, bug, or other issue you ran into? (Please include relevant error output, if available.)
+      description: What is the error, bug, or other issue you ran into? (Please include any relevant error output, if available.)
       placeholder: Tell us what happened.
     validations:
       required: true
@@ -63,7 +63,7 @@ body:
     attributes:
       label: Conda info
       description: |
-        Let's get the info on your conda installation. Run the following command and paste the output in the field below.
+        Let's examine your conda installation. Run the following command and paste the output in the field below.
 
         ```bash
         conda info
@@ -85,7 +85,7 @@ body:
     attributes:
       label: Conda list
       description: |
-        Lets examine the packages installed in your conda environment and the channels they came from. Make sure you are in the environment where you are seeing the issues. Run the following command and paste the output in the field below.
+        Let's examine the packages installed in your conda environment and the channels they came from. Make sure you are in the environment where you are experiencing the issues. Run the following command and paste the output in the field below.
 
         ```bash
         conda list --show-channel-urls
