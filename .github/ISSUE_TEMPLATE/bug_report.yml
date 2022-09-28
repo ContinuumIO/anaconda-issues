@@ -33,7 +33,7 @@ body:
     id: product
     attributes:
       label: Impacted product
-      description: Please indicate the product for which you are reporting the bug or issue.
+      description: Please indicate the product(s) for which you are reporting the bug or issue.
       options:
         - label: Anaconda Distribution
           required: false
@@ -77,7 +77,7 @@ body:
     attributes:
       label: Conda list
       description: |
-        Lets examine the packages installed in your conda environment and the channels they came from. Make sure you are in the environment where \n you are seeing the issues. Run the following command and paste the output in the field below.
+        Lets examine the packages installed in your conda environment and the channels they came from. Make sure you are in the environment where you are seeing the issues. Run the following command and paste the output in the field below.
 
         ```bash
         conda list --show-channel-urls
