@@ -35,7 +35,7 @@ body:
       label: Impacted product
       description: Please indicate the product(s) for which you are reporting the bug or issue.
       options:
-        - label: Anaconda Distribution
+        - label: Anaconda Distribution (formerly Anaconda Individual Edition)
           required: false
         - label: Miniconda
           required: false
