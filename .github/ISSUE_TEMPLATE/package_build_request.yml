@@ -1,0 +1,105 @@
+name: Package build request
+description: Request a package to be built (e.g. new, updates, and rebuilds).
+labels: ['package_request']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please use this form to submit a request for a package to be built.
+
+        We kindly ask that you take the time to:
+          - Search Anaconda.org ([anaconda](https://anaconda.org/anaconda) channel) to verify whether the package already exists in our channels.
+          - Search through [existing issues](https://github.com/ContinuumIO/anaconda-issues/issues) to verify whether someone else has already requested the same package.
+          - Fill in all of the fields below, as best you can.
+          - Review and comply with our [Anaconda Community Code of Conduct](https://www.anaconda.com/community-code-of-conduct/).
+
+        Thank you for your contribution and for helping Anaconda better serve its community of users. 🐍
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      description: Please confirm and check all the following options.
+      options:
+        - label: I added a descriptive title
+          required: true
+        - label: I searched for other package requests and couldn't find a duplication
+          required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      description: "Please confirm the following:"
+      options:
+        - label: I added a descriptive title (including the requested package **name**, **version**, and **platform**).
+          required: true
+        - label: I searched the [anaconda](https://anaconda.org/anaconda) channel and did not find the package I'm requesting.
+          required: true
+        - label: I searched through [existing issues](https://github.com/ContinuumIO/anaconda-issues/issues) and did not find a duplicate request for this package.
+          required: true
+
+  - type: checkboxes
+    id: package-request-type
+    attributes:
+      label: Request type
+      description: Is this a new, update, or rebuild request?
+      options:
+        - label: New (i.e. no versions of this package currently exist in the "anaconda" channel)
+        - label: Update (i.e. older versions of this package exist and I'm requesting an updated version)
+        - label: Rebuild (i.e. something is wrong with an existing version of this package and needs to be rebuilt)
+
+  - type: input
+    id: package-name
+    attributes:
+      label: Name
+      description: Name of the package.
+      placeholder: ex. numpy
+    validations:
+      required: true
+
+  - type: input
+    id: package-version
+    attributes:
+      label: Version
+      description: Version of the package you're requesting.
+      placeholder: ex. 1.20.0
+    validations:
+      required: true
+
+  - type: input
+    id: package-platform
+    attributes:
+      label: Platform(s)
+      description: Platform(s) you need the package to be built for.
+      placeholder: ex. linux-64
+    validations:
+      required: true
+
+  - type: input
+    id: package-source-code
+    attributes:
+      label: Location of source code
+      description: Where the source code can be found for this project (e.g. the project's Github repo or PyPI page).
+    validations:
+      required: false
+
+  - type: input
+    id: package-conda-forge-feedstock
+    attributes:
+      label: Conda-Forge feedstock
+      description: Link to the Conda-Forge feedstock (if applicable)
+    validations:
+      required: false
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: (OPTIONAL) Reason for this request
+      description: Any information you provide here may help us better prioritize your request.
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: (OPTIONAL) Additional information
+      description: Please provide additional information or screenshots that you think may help us fulfill this request.
