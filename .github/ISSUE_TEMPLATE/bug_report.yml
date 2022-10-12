@@ -63,7 +63,7 @@ body:
     attributes:
       label: Conda info
       description: |
-        Let's examine your conda installation. Run the following command and paste the output in the field below.
+        Let's examine your installation. Run the following command and paste the output in the field below.
 
         ```bash
         conda info
@@ -74,7 +74,7 @@ body:
     attributes:
       label: Conda config
       description: |
-        Let's examine your conda configurations. Run the following command and paste the output in the field below.
+        Let's examine your configurations. Run the following command and paste the output in the field below.
 
         ```bash
         conda config --show-sources
@@ -85,7 +85,7 @@ body:
     attributes:
       label: Conda list
       description: |
-        Let's examine the packages installed in your conda environment and the channels they came from. Make sure you are in the environment where you are experiencing the issues. Run the following command and paste the output in the field below.
+        Let's examine the packages installed in your environment and the channels they came from. Make sure you are in the environment where you are experiencing the issues. Run the following command and paste the output in the field below.
 
         ```bash
         conda list --show-channel-urls
