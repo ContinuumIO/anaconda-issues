@@ -8,7 +8,9 @@ body:
         Please use this form to submit a request for a package to be built.
 
         We kindly ask that you take the time to:
-          - Search Anaconda.org ([anaconda](https://anaconda.org/anaconda) channel) to verify whether the package already exists in our channels.
+          - Search our defaults channels to verify whether the package already exists:
+            - For Python packages: https://repo.anaconda.com/pkgs/main/
+            - For R packages: https://repo.anaconda.com/pkgs/r/
           - Search through [existing issues](https://github.com/ContinuumIO/anaconda-issues/issues) to verify whether someone else has already requested the same package.
           - Fill in all of the fields below, as best you can.
           - Review and comply with our [Anaconda Community Code of Conduct](https://www.anaconda.com/community-code-of-conduct/).
