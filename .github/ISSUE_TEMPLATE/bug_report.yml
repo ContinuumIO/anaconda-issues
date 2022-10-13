@@ -1,5 +1,5 @@
 name: General Bug Report
-description: Report a bug or other issue to help us improve our products.
+description: Report a bug or other issue to help us improve our packages and installers (Anaconda Distribution and Miniconda).
 labels: ['type-bug']
 body:
   - type: markdown
@@ -46,7 +46,7 @@ body:
     id: what-happened
     attributes:
       label: What happened?
-      description: What is the error, bug, or other issue you ran into? (Please include any relevant error output, if available.)
+      description: What is the error, bug, or other issue you ran into? (Please include steps to reproduce the issue and any relevant error output, if available.)
       placeholder: Tell us what happened.
     validations:
       required: true
