@@ -97,11 +97,15 @@ body:
   - type: textarea
     id: reason
     attributes:
-      label: (OPTIONAL) Reason for this request
+      label: Reason for this request
       description: Any information you provide here may help us better prioritize your request.
+    validations:
+      required: true
 
   - type: textarea
     id: additional-info
     attributes:
       label: (OPTIONAL) Additional information
       description: Please provide additional information or screenshots that you think may help us fulfill this request.
+    validations:
+      required: false
