@@ -47,9 +47,9 @@ body:
       label: Request type
       description: Is this a new, update, or rebuild request?
       options:
-        - label: New (i.e. no versions of this package currently exist in the "anaconda" channel)
+        - label: New (i.e. no versions of this package currently exist on repo.anaconda.com)
         - label: Update (i.e. older versions of this package exist and I'm requesting an updated version)
-        - label: Rebuild (i.e. something is wrong with an existing version of this package and needs to be rebuilt)
+        - label: Rebuild (i.e. something is wrong with an existing version of this package and it needs to be rebuilt)
 
   - type: input
     id: package-name
