@@ -36,7 +36,7 @@ body:
       options:
         - label: I added a descriptive title (including the requested package **name**, **version**, and **platform**).
           required: true
-        - label: I searched the [anaconda](https://anaconda.org/anaconda) channel and did not find the package I'm requesting.
+        - label: I searched the defaults channels ([Python](https://repo.anaconda.com/pkgs/main/) and [R](https://repo.anaconda.com/pkgs/r/)) and did not find the package I'm requesting.
           required: true
         - label: I searched through [existing issues](https://github.com/ContinuumIO/anaconda-issues/issues) and did not find a duplicate request for this package.
           required: true
