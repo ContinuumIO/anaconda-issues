@@ -1,5 +1,5 @@
 name: General Bug Report
-description: Report a bug or other issue to help us improve our packages and installers (Anaconda Distribution and Miniconda).
+description: Report a bug or other issue to help us improve our products (Anaconda-built packages, Anaconda Distribution, Miniconda, and Anaconda.org).
 labels: ['type-bug']
 body:
   - type: markdown
