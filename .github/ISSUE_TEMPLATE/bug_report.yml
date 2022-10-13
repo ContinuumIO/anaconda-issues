@@ -1,5 +1,5 @@
 name: General Bug Report
-description: Report a bug or other issue to help us improve our products (Anaconda-built packages, Anaconda Distribution, Miniconda, and Anaconda.org).
+description: Report a bug, CVE, or other issue to help us improve our products (Anaconda-built packages, Anaconda Distribution, Miniconda, and Anaconda.org).
 labels: ['type-bug']
 body:
   - type: markdown
@@ -48,16 +48,16 @@ body:
     id: what-happened
     attributes:
       label: What happened?
-      description: What is the error, bug, or other issue you ran into? (Please include steps to reproduce the issue and any relevant error output, if available.)
-      placeholder: Tell us what happened.
+      description: What is the error, bug, CVE, or other issue? (Please include steps to reproduce the issue and any relevant error output, if available.)
+      placeholder: Describe the error, bug, CVE, or other issue.
     validations:
       required: true
   - type: textarea
     id: expected-behavior
     attributes:
-      label: Expected behavior
-      description: What were you expecting to happen?
-      placeholder: Tell us what you expected to happen.
+      label: Expected behavior or outcome
+      description: What is the expected behavior or outcome?
+      placeholder: Tell us what you think is the expected behavior or outcome.
     validations:
       required: true
   - type: textarea
