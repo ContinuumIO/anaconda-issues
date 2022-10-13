@@ -35,11 +35,13 @@ body:
       label: Impacted product
       description: Please indicate the product(s) for which you are reporting the bug or issue.
       options:
+        - label: A conda package (built by Anaconda)
+          required: false
         - label: Anaconda Distribution (formerly Anaconda Individual Edition)
           required: false
         - label: Miniconda
           required: false
-        - label: A conda package
+        - label: Anaconda.org
           required: false
 
   - type: textarea
