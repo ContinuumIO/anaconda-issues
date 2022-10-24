@@ -21,17 +21,6 @@ body:
     id: checks
     attributes:
       label: Checklist
-      description: Please confirm and check all the following options.
-      options:
-        - label: I added a descriptive title
-          required: true
-        - label: I searched for other package requests and couldn't find a duplication
-          required: true
-
-  - type: checkboxes
-    id: checks
-    attributes:
-      label: Checklist
       description: "Please confirm the following:"
       options:
         - label: I added a descriptive title (including the requested package **name**, **version**, and **platform**).
