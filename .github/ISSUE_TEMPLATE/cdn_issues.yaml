@@ -35,13 +35,15 @@ body:
       label: Impacted product
       description: Please indicate the product(s) for which you are reporting the bug or issue.
       options:
+        - label: Anaconda.org
+          required: false
         - label: CDN
           required: false
-        - label: Anaconda Distribution (formerly Anaconda Individual Edition)
+        - label: conda-forge
           required: false
-        - label: Miniconda
+        - label: bioconda
           required: false
-        - label: Anaconda.org
+        - label: nvidia
           required: false
 
   - type: textarea
