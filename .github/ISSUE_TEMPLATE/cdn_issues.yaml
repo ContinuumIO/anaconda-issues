@@ -1,6 +1,6 @@
 name: CDN Issue Report
 description: Report issues with a CDN-backed anaconda.org channel (such as conda-forge, bioconda, nvidia, etc).
-labels: ['type-bug']
+labels: ['type-bug', 'anaconda-sync']
 body:
   - type: markdown
     attributes:
