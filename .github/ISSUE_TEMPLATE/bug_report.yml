@@ -33,7 +33,7 @@ body:
     id: product
     attributes:
       label: Impacted product
-      description: Please indicate the product(s) for which you are reporting the bug or issue.
+      description: Please indicate the product(s) for which you are reporting the bug or issue. For issues with Anaconda Navigator, please use [this form](https://github.com/ContinuumIO/anaconda-issues/issues/new?assignees=&labels=type-bug%2Cpkg-navigator&template=navigator_bug_report.yml).
       options:
         - label: A conda package (built by Anaconda)
           required: false
