@@ -8,4 +8,4 @@ unrelated to any specific package, please use the
 [Conda issue tracker](https://github.com/conda/conda/issues).
 
 To download Anaconda, visit the [Anaconda download page](
-https://www.anaconda.com/distribution/).
+https://www.anaconda.com/download/).
