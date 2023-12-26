@@ -8,7 +8,7 @@ jobs:
   check-conditions:
     if: contains(github.event.issue.labels.*.name, 'type-bug')
     runs-on:
-      labels: self-hosted-main
+      labels: ubuntu-latest
     outputs:
       should-notify: ${{ steps.filter.outputs.should-notify }}
     steps:
@@ -27,7 +27,7 @@ jobs:
   notify-slack:
     if: needs.check-conditions.outputs.should-notify == 'true'
     runs-on:
-      labels: self-hosted-main
+      labels: ubuntu-latest
     needs: [check-conditions]
     steps:
     - name: Send message to Slack
