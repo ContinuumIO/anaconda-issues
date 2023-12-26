@@ -1,4 +1,4 @@
-name: Anaconda.org Isuse Notification to Slack
+name: Anaconda.org Issues Notification to Slack
 
 on:
   issues:
@@ -14,7 +14,7 @@ jobs:
     steps:
     - name: Check if "Anaconda.org" checkbox is checked
       id: filter
-      run: |
+      run: lazy-actions/slatify@master
         body="${{ github.event.issue.body }}"
         search_term="- [x] Anaconda.org"
 
@@ -31,7 +31,7 @@ jobs:
     needs: [check-conditions]
     steps:
     - name: Send message to Slack
-      uses: rtCamp/action-slack-notify@v2
+      uses: 
       env:
           # Tokens and url for test notifications
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
