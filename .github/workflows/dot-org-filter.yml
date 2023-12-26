@@ -34,8 +34,8 @@ jobs:
       uses: 
       env:
           # Tokens and url for test notifications
-        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+        SLACK_WEBHOOK_URL: ${{ secrets.DOT_ORG_SLACK_WEBHOOK_URL }}
+        SLACK_CHANNEL_ID: ${{ secrets.DOT_ORG_SLACK_CHANNEL_ID }}
         SLACK_TITLE: "Issue with 'type-bug' label Detected"
         SLACK_MESSAGE: "Title: ${{ github.event.issue.title }} - URL: ${{ github.event.issue.html_url }} - 'Test.org' checked"
         SLACK_COLOR: "#a6368d"
