@@ -1,0 +1,43 @@
+# This workflow sends a notification to Slack when an issue labeled 'type-bug' is opened, edited, or labeled and the 'Anaconda.org' checkbox is checked in the issue description.
+
+name: Anaconda.org Issues Notification to Slack
+
+on:
+  issues:
+    types: [opened, edited, labeled]
+
+jobs:
+  check-conditions:
+    if: contains(github.event.issue.labels.*.name, 'type-bug')
+    runs-on:
+      labels: ubuntu-latest
+    outputs:
+      should-notify: ${{ steps.filter.outputs.should-notify }}
+    steps:
+    - name: Check if "Anaconda.org" checkbox is checked
+      id: filter
+      run: lazy-actions/slatify@master
+        body="${{ github.event.issue.body }}"
+        search_term="- [x] Anaconda.org"
+
+        if echo "$body" | grep -Fxq "$search_term"; then
+          echo "::set-output name=should-notify::true"
+        else
+          echo "::set-output name=should-notify::false"
+        fi
+
+  notify-slack:
+    if: needs.check-conditions.outputs.should-notify == 'true'
+    runs-on:
+      labels: ubuntu-latest
+    needs: [check-conditions]
+    steps:
+    - name: Send message to Slack
+      uses: 
+      env:
+          # Tokens and url for test notifications
+        SLACK_WEBHOOK_URL: ${{ secrets.DOT_ORG_SLACK_WEBHOOK_URL }}
+        SLACK_CHANNEL_ID: ${{ secrets.DOT_ORG_SLACK_CHANNEL_ID }}
+        SLACK_TITLE: "Issue with 'type-bug' label Detected"
+        SLACK_MESSAGE: "Title: ${{ github.event.issue.title }} - URL: ${{ github.event.issue.html_url }} - 'Test.org' checked"
+        SLACK_COLOR: "#a6368d"
