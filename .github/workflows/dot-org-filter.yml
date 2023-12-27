@@ -1,3 +1,5 @@
+# This workflow sends a notification to Slack when an issue labeled 'type-bug' is opened, edited, or labeled and the 'Anaconda.org' checkbox is checked in the issue description.
+
 name: Anaconda.org Issues Notification to Slack
 
 on:
