@@ -28,16 +28,23 @@ jobs:
 
   notify-slack:
     if: needs.check-conditions.outputs.should-notify == 'true'
-    runs-on:
-      labels: ubuntu-latest
+    runs-on: ubuntu-latest
     needs: [check-conditions]
     steps:
     - name: Send message to Slack
-      uses: 
       env:
-          # Tokens and url for test notifications
-        SLACK_WEBHOOK_URL: ${{ secrets.DOT_ORG_SLACK_WEBHOOK_URL }}
+          # Tokens and url are stored in the repository's secrets settings
         SLACK_CHANNEL_ID: ${{ secrets.DOT_ORG_SLACK_CHANNEL_ID }}
+        SLACK_BOT_TOKEN: ${{ secrets.DOT_ORG_SLACK_BOT_TOKEN }}
         SLACK_TITLE: "Issue with 'type-bug' label Detected"
-        SLACK_MESSAGE: "Title: ${{ github.event.issue.title }} - URL: ${{ github.event.issue.html_url }} - 'Test.org' checked"
-        SLACK_COLOR: "#a6368d"
+        SLACK_MESSAGE: "Title: ${{ github.event.issue.title }} - URL: ${{ github.event.issue.html_url }}"
+      run: |
+        curl -X POST -H 'Content-type: application/json' -H "Authorization: Bearer $SLACK_BOT_TOKEN" --data '{
+          "channel":"'"$SLACK_CHANNEL_ID"'",
+          "text":"'"$SLACK_TITLE"'",
+          "attachments": [
+            {
+              "text": "'"$SLACK_MESSAGE"'"
+            }
+          ]
+        }' https://slack.com/api/chat.postMessage
