@@ -39,7 +39,7 @@ jobs:
         SLACK_TITLE: "Issue with 'type-bug' label Detected"
         SLACK_MESSAGE: "Title: ${{ github.event.issue.title }} - URL: ${{ github.event.issue.html_url }}"
       run: |
-        curl -X POST -H 'Content-type: application/json' -H "Authorization: Bearer $SLACK_BOT_TOKEN" --data '{
+        response=$(curl -X POST -H 'Content-type: application/json' -H "Authorization: Bearer $SLACK_BOT_TOKEN" --data '{
           "channel":"'"$SLACK_CHANNEL_ID"'",
           "text":"'"$SLACK_TITLE"'",
           "attachments": [
@@ -47,4 +47,5 @@ jobs:
               "text": "'"$SLACK_MESSAGE"'"
             }
           ]
-        }' https://slack.com/api/chat.postMessage
+        }' https://slack.com/api/chat.postMessage)
+        echo $response
