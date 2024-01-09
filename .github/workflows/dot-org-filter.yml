@@ -20,7 +20,7 @@ jobs:
         body="${{ github.event.issue.body }}"
         search_term="- [x] Anaconda.org"
 
-        if echo "$body" | grep -Fxq "$search_term"; then
+        if printf '%s\n' "$body" | grep -Fxq -- "$search_term"; then
           echo "::set-output name=should-notify::true"
         else
           echo "::set-output name=should-notify::false"
