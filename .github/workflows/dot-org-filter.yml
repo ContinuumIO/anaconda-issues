@@ -36,8 +36,8 @@ jobs:
           # Tokens and url are stored in the repository's secrets settings
         SLACK_CHANNEL_ID: ${{ secrets.DOT_ORG_SLACK_CHANNEL_ID }}
         SLACK_BOT_TOKEN: ${{ secrets.DOT_ORG_SLACK_BOT_TOKEN }}
-        SLACK_TITLE: "Issue with 'type-bug' label Detected"
-        SLACK_MESSAGE: "Title: ${{ github.event.issue.title }} - URL: ${{ github.event.issue.html_url }}"
+        SLACK_TITLE: "Anaconda.org Bug Issue Detected"
+        SLACK_MESSAGE: "An anaconda-issues issue was submitted with an anaconda.org bug.\nTitle: ${{ github.event.issue.title }}\nLink to Issue: ${{ github.event.issue.html_url }}"
       run: |
         response=$(curl -X POST -H 'Content-type: application/json' -H "Authorization: Bearer $SLACK_BOT_TOKEN" --data '{
           "channel":"'"$SLACK_CHANNEL_ID"'",
