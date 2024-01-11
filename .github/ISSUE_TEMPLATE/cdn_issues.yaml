@@ -1,0 +1,102 @@
+name: CDN Issue Report
+description: Report issues with a CDN-backed anaconda.org channel (such as conda-forge, bioconda, nvidia, etc).
+labels: ['type-bug', 'anaconda-sync']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping us identify bugs and issues in our products.
+
+        We kindly ask that you take the time to:
+          - Search through [existing issues](https://github.com/ContinuumIO/anaconda-issues/issues) to verify whether your bug or issue has already been reported.
+          - Fill in all of the fields below, as best you can.
+          - Review and comply with our [Anaconda Community Code of Conduct](https://www.anaconda.com/community-code-of-conduct/).
+
+        Again, thank you for your contribution and for helping Anaconda better serve its community of users. 🐍
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      description: "Please confirm the following:"
+      options:
+        - label: I added a descriptive title.
+          required: true
+        - label: I searched through [existing issues](https://github.com/ContinuumIO/anaconda-issues/issues) and couldn't find a solution or duplicate issue.
+          required: true
+        - label: I searched on the web (e.g. Google) and didn't find any helpful information.
+          required: true
+        - label: I searched the [Anaconda documentation](https://docs.anaconda.com/) and didn't find any helpful information.
+          required: true
+
+  - type: checkboxes
+    id: product
+    attributes:
+      label: Impacted product
+      description: Please indicate the product(s) for which you are reporting the bug or issue.
+      options:
+        - label: Anaconda.org
+          required: false
+        - label: CDN
+          required: false
+        - label: conda-forge
+          required: false
+        - label: bioconda
+          required: false
+        - label: nvidia
+          required: false
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What is the error, bug, CVE, or other issue? (Please include steps to reproduce the issue and any relevant error output, if available.)
+      placeholder: Describe the error, bug, CVE, or other issue.
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior or outcome
+      description: What is the expected behavior or outcome?
+      placeholder: Tell us what you think is the expected behavior or outcome.
+    validations:
+      required: true
+  - type: textarea
+    id: info
+    attributes:
+      label: Conda info
+      description: |
+        Let's examine your installation. Run the following command and paste the output in the field below.
+
+        ```bash
+        conda info
+        ```
+      render: shell
+  - type: textarea
+    id: config
+    attributes:
+      label: Conda config
+      description: |
+        Let's examine your configurations. Run the following command and paste the output in the field below.
+
+        ```bash
+        conda config --show-sources
+        ```
+      render: shell
+  - type: textarea
+    id: list
+    attributes:
+      label: Conda list
+      description: |
+        Let's examine the packages installed in your environment and the channels they came from. Make sure you are in the environment where you are experiencing the issues. Run the following command and paste the output in the field below.
+
+        ```bash
+        conda list --show-channel-urls
+        ```
+      render: shell
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional information
+      description: Add any additional information or screenshots that you think may help us resolve your issue.
